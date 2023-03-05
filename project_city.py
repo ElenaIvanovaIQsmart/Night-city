@@ -1,18 +1,19 @@
-from turtle import *
 from random import *
+from turtle import *
 
 Screen().setup(400, 400)
 speed(0)
 Screen().bgcolor("darkBlue")
 
-for i in range(100): # рисуем звездное небо
+for i in range(100):  # рисуем звездное небо
     x = randint(-200, 200)
     y = randint(-200, 200)
     penup()
     goto(x, y)
     dot(randint(1, 5), "yellow")
 
-def square(l, m): # функция рисуем окно
+
+def square(l, m):  # функция рисуем окно
     penup()
     goto(l, m)
     pendown()
@@ -38,7 +39,7 @@ lst_y = []
 k = -200
 h = 0
 i = 1
-while k < 200: #рисуем город и заносим координаты вершин в словарь, чтобы окна при использовании random были ниже крыши дома
+while k < 200:  # рисуем город и заносим координаты вершин в словарь, чтобы окна при использовании random были ниже крыши дома
     if i % 2 == 1:
         y = h
         x = randint(k + 30, k + 50)
@@ -77,4 +78,4 @@ while f < 180:  # рисуем окна:
             m = k - (choice(ch1))  # k - макс значение y
             l = s + ((s1 - s) / 2)  # значнеие x
             square(l, m)
-
+done()
